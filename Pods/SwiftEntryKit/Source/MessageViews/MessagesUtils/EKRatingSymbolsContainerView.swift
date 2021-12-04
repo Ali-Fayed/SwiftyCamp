@@ -6,14 +6,15 @@
 //  Copyright (c) 2018 huri000@gmail.com. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-public class EKRatingSymbolsContainerView: UIView {
+final public class EKRatingSymbolsContainerView: UIView {
     
     private var message: EKRatingMessage!
     private var symbolsArray: [EKRatingSymbolView] = []
     
-    public func setup(with message: EKRatingMessage, externalSelection: @escaping EKRatingMessage.Selection) {
+    public func setup(with message: EKRatingMessage,
+                      externalSelection: @escaping EKRatingMessage.Selection) {
         self.message = message
         let internalSelection = { [unowned self] (index: Int) in
             self.select(index: index)
@@ -21,16 +22,19 @@ public class EKRatingSymbolsContainerView: UIView {
         }
         
         for (index, item) in message.ratingItems.enumerated() {
-            let itemView = EKRatingSymbolView(unselectedImage: item.unselectedImage, selectedImage: item.selectedImage, selection: internalSelection)
+            let itemView = EKRatingSymbolView(unselectedImage: item.unselectedImage,
+                                              selectedImage: item.selectedImage,
+                                              selection: internalSelection)
             itemView.tag = index
             addSubview(itemView)
-            itemView.set(.width, .height, of: 50)
+            itemView.set(.height, of: item.size.height)
+            itemView.set(.width, of: item.size.width)
             symbolsArray.append(itemView)
         }
         symbolsArray.layoutToSuperview(axis: .vertically, priority: .must)
         symbolsArray.spread(.horizontally, stretchEdgesToSuperview: true)
         
-        select()
+        select(index: message.selectedIndex)
     }
     
     private func select(index: Int? = nil) {
@@ -44,7 +48,11 @@ public class EKRatingSymbolsContainerView: UIView {
                     view.isSelected = false
                     view.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
                 }
-                UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: [.allowUserInteraction], animations: {
+                UIView.animate(withDuration: 0.6,
+                               delay: 0,
+                               usingSpringWithDamping: 0.5,
+                               initialSpringVelocity: 0,
+                               options: [.allowUserInteraction], animations: {
                     view.transform = .identity
                 }, completion: nil)
             }

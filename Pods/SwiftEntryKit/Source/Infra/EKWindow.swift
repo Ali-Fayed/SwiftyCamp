@@ -13,9 +13,19 @@ class EKWindow: UIWindow {
     var isAbleToReceiveTouches = false
     
     init(with rootVC: UIViewController) {
-        super.init(frame: UIScreen.main.bounds)
+        if #available(iOS 13.0, *) {
+            // TODO: Patched to support SwiftUI out of the box but should require attendance
+            if let scene = UIApplication.shared.connectedScenes.filter({$0.activationState == .foregroundActive}).first as? UIWindowScene {
+                super.init(windowScene: scene)
+            } else {
+                super.init(frame: UIScreen.main.bounds)
+            }
+        } else {
+            super.init(frame: UIScreen.main.bounds)
+        }
         backgroundColor = .clear
         rootViewController = rootVC
+        accessibilityViewIsModal = true
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -26,9 +36,15 @@ class EKWindow: UIWindow {
         if isAbleToReceiveTouches {
             return super.hitTest(point, with: event)
         }
-        if let view = super.hitTest(point, with: event), view != self {
+        
+        guard let rootVC = EKWindowProvider.shared.rootVC else {
+            return nil
+        }
+        
+        if let view = rootVC.view.hitTest(point, with: event) {
             return view
         }
+        
         return nil
     }
 }

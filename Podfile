@@ -1,7 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '12.0'
 
-target 'Unwrap' do
+target 'SwiftyCamp' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
@@ -12,15 +12,10 @@ target 'Unwrap' do
   pod 'SwiftEntryKit', '~> 1.0'
   pod 'SDWebImage', '~> 5.0'
   pod 'MKRingProgressView', '~> 2.2.2'
-  pod 'Sourceful', :git => 'https://github.com/twostraws/Sourceful.git', :branch => 'master'
+  pod 'Sourceful'
   pod 'DZNEmptyDataSet', '~> 1.8'
-  pod 'SwiftLint', '0.32.0'
   pod 'Zephyr', '3.4.0'
 
-  target 'UnwrapTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
 
   post_install do |installer|
     installer.pods_project.build_configurations.each do |config|

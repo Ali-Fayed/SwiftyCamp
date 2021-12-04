@@ -10,7 +10,7 @@ import UIKit
 
 protocol EntryPresenterDelegate: class {
     var isResponsiveToTouches: Bool { set get }
-    func displayPendingEntryIfNeeded()
+    func displayPendingEntryOrRollbackWindow(dismissCompletionHandler: SwiftEntryKit.DismissCompletionHandler?)
 }
 
 class EKRootViewController: UIViewController {
@@ -214,7 +214,7 @@ extension EKRootViewController {
 
 extension EKRootViewController: EntryContentViewDelegate {
     
-    func didFinishDisplaying(entry: EKEntryView, keepWindowActive: Bool) {
+    func didFinishDisplaying(entry: EKEntryView, keepWindowActive: Bool, dismissCompletionHandler: SwiftEntryKit.DismissCompletionHandler?) {
         guard !isDisplaying else {
             return
         }
@@ -223,7 +223,7 @@ extension EKRootViewController: EntryContentViewDelegate {
             return
         }
         
-        delegate.displayPendingEntryIfNeeded()
+        delegate.displayPendingEntryOrRollbackWindow(dismissCompletionHandler: dismissCompletionHandler)
     }
     
     func changeToInactive(withAttributes attributes: EKAttributes, pushOut: Bool) {
@@ -232,7 +232,8 @@ extension EKRootViewController: EntryContentViewDelegate {
         }
         
         let clear = {
-            self.changeBackground(to: .clear, duration: attributes.exitAnimation.totalDuration)
+            let style = EKBackgroundView.Style(background: .clear, displayMode: attributes.displayMode)
+            self.changeBackground(to: style, duration: attributes.exitAnimation.totalDuration)
         }
         
         guard pushOut else {
@@ -251,13 +252,15 @@ extension EKRootViewController: EntryContentViewDelegate {
     }
     
     func changeToActive(withAttributes attributes: EKAttributes) {
-        changeBackground(to: attributes.screenBackground, duration: attributes.entranceAnimation.totalDuration)
+        let style = EKBackgroundView.Style(background: attributes.screenBackground,
+                                           displayMode: attributes.displayMode)
+        changeBackground(to: style, duration: attributes.entranceAnimation.totalDuration)
     }
     
-    private func changeBackground(to style: EKAttributes.BackgroundStyle, duration: TimeInterval) {
+    private func changeBackground(to style: EKBackgroundView.Style, duration: TimeInterval) {
         DispatchQueue.main.async {
             UIView.animate(withDuration: duration, delay: 0, options: [], animations: {
-                self.backgroundView.background = style
+                self.backgroundView.style = style
             }, completion: nil)
         }
     }

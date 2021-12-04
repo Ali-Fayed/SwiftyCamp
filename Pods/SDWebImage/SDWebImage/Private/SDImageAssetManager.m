@@ -7,6 +7,7 @@
  */
 
 #import "SDImageAssetManager.h"
+#import "SDInternalMacros.h"
 
 static NSArray *SDBundlePreferredScales() {
     static NSArray *scales;
@@ -31,7 +32,7 @@ static NSArray *SDBundlePreferredScales() {
 }
 
 @implementation SDImageAssetManager {
-    dispatch_semaphore_t _lock;
+    SD_LOCK_DECLARE(_lock);
 }
 
 + (instancetype)sharedAssetManager {
@@ -55,7 +56,7 @@ static NSArray *SDBundlePreferredScales() {
         valueOptions = NSPointerFunctionsStrongMemory;
 #endif
         _imageTable = [NSMapTable mapTableWithKeyOptions:NSPointerFunctionsCopyIn valueOptions:valueOptions];
-        _lock = dispatch_semaphore_create(1);
+        SD_LOCK_INIT(_lock);
 #if SD_UIKIT
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveMemoryWarning:) name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
 #endif
