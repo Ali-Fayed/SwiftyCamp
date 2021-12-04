@@ -46,7 +46,6 @@ final class User: Codable {
     /// The number of points this user earned through practicing.
     var practicePoints = 0
 
-
     /// The number of times the user has shared their score.
     var scoreShareCount = 0
 

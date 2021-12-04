@@ -16,13 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var tabBarController: MainTabBarController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
-        if #available(iOS 13, *) {
-            window?.backgroundColor = .systemBackground
-        } else {
-            window?.backgroundColor = .white
-        }
-
+        window?.overrideUserInterfaceStyle = .dark
         // Instantiate UserDefaults keys to be monitored
         let defaults = UserDefaults()
         defaults.register(defaults: ["User": NSData(), "Test User": NSData()])
