@@ -13,5 +13,4 @@ enum AwardType {
     case learn(chapter: String)
     case review(chapter: String)
     case practice(type: String)
-    case challenge
 }

@@ -19,7 +19,6 @@ final class User: Codable {
         case reviewedSections
         case practiceSessions
         case practicePoints
-        case dailyChallenges
 
         case scoreShareCount
         case latestNewsArticle
@@ -47,8 +46,6 @@ final class User: Codable {
     /// The number of points this user earned through practicing.
     var practicePoints = 0
 
-    /// An array of all the days the user has completed a challenge.
-    var dailyChallenges = [ChallengeResult]()
 
     /// The number of times the user has shared their score.
     var scoreShareCount = 0
@@ -71,7 +68,7 @@ final class User: Codable {
 
     /// The total number of points for this user.
     var totalPoints: Int {
-        return learnPoints + reviewPoints + practicePoints + challengePoints
+        return learnPoints + reviewPoints + practicePoints
     }
 
     /// The number of points this user earned through learning.
@@ -82,11 +79,6 @@ final class User: Codable {
     /// The number of points this user earned through learning.
     var reviewPoints: Int {
         return reviewedSections.count * User.pointsForReviewing
-    }
-
-    /// The number of points this user earned through challenges.
-    var challengePoints: Int {
-        return dailyChallenges.reduce(0) { $0 + $1.score }
     }
 
     /// The users current rank number.
@@ -131,13 +123,6 @@ final class User: Codable {
         return UIImage(bundleName: "Rank Level \(rankNumber)")
     }
 
-    /// Returns true if the user has completed today's challenge, or false otherwise.
-    var hasCompletedTodaysChallenge: Bool {
-        guard let mostRecent = dailyChallenges.first else { return false }
-
-        return mostRecent.date.isSameDay(as: Date())
-    }
-
     /// Returns an instance of the correct source code theme for the user's current settings.
     var sourceCodeTheme: SourceCodeTheme {
         if UIApplication.activeTraitCollection.userInterfaceStyle == .dark {
@@ -167,7 +152,6 @@ final class User: Codable {
         reviewedSections = try container.decode(Set<String>.self, forKey: .reviewedSections)
         practiceSessions = try container.decode(CountedSet<String>.self, forKey: .practiceSessions)
         practicePoints = try container.decode(Int.self, forKey: .practicePoints)
-        dailyChallenges = try container.decode([ChallengeResult].self, forKey: .dailyChallenges)
 
         scoreShareCount = try container.decode(Int.self, forKey: .scoreShareCount)
         latestNewsArticle = try container.decode(Int.self, forKey: .latestNewsArticle)
@@ -209,17 +193,6 @@ final class User: Codable {
         practicePoints += score
         statusChanged()
     }
-
-    /// Triggered when the user completes a daily challenge.
-    /// They score points for each correct answer.
-    /// Challenges are inserted at the start of the array so that
-    /// most recently completed are shown first.
-    func completedChallenge(score: Int) {
-        let result = ChallengeResult(date: Date(), score: score)
-        dailyChallenges.insert(result, at: 0)
-        statusChanged()
-    }
-
     /// Triggered when the user reads any news story.
     func readNewsStory(forURL url: URL) {
         articlesRead.insert(url)

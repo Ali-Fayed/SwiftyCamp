@@ -25,7 +25,7 @@ class AwardPointsViewController: UIViewController, Storyboarded {
     @IBOutlet var tapToContinue: UILabel!
 
     /// The reason we're giving points to the user: learning, reviewing, practicing, or challenges.
-    var awardType = AwardType.challenge
+    var awardType = AwardType.practice(type: "")
 
     /// The number of points to award.
     var pointsToAward = 100
@@ -106,9 +106,6 @@ class AwardPointsViewController: UIViewController, Storyboarded {
 
         case .practice(let type):
             User.current.completedPractice(type, score: pointsToAward)
-
-        case .challenge:
-            User.current.completedChallenge(score: pointsToAward)
         }
     }
 

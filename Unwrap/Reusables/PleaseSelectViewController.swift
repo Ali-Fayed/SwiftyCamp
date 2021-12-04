@@ -26,13 +26,6 @@ class PleaseSelectViewController: UIViewController, Storyboarded {
         case .learn:
             prompt.text = "Please select a topic to learn"
 
-        case .challenges:
-            if User.current.hasCompletedTodaysChallenge {
-                prompt.text = "Come back tomorrow"
-            } else {
-                prompt.text = "Start today's challenge when you're ready"
-            }
-
         case .news:
             prompt.text = "Please select an article to read"
 
