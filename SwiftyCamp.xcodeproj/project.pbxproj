@@ -586,13 +586,6 @@
 			remoteGlobalIDString = 5192DDC82273E05E0081C6DE;
 			remoteInfo = Stickers;
 		};
-		51CC13742065607F00F37A67 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 51CC13572065607C00F37A67 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 51CC135E2065607C00F37A67;
-			remoteInfo = Unwrap;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -763,7 +756,6 @@
 		51CC13672065607C00F37A67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		51CC136C2065607F00F37A67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51CC136E2065607F00F37A67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		51CC13732065607F00F37A67 /* SwiftyCampTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyCampTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		51CC1390206560A600F37A67 /* ShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeView.swift; sourceTree = "<group>"; };
 		51CC13922065678A00F37A67 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		51CC1394206568DE00F37A67 /* UIBezierPath-Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath-Logo.swift"; sourceTree = "<group>"; };
@@ -1179,14 +1171,10 @@
 		51FE139520E25F1100F29889 /* protocol-extensions.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "protocol-extensions.mp4"; sourceTree = "<group>"; };
 		51FE151D20E2814E00F29889 /* StudyReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyReview.swift; sourceTree = "<group>"; };
 		7D893EAF0870F3757BC31894 /* Pods-SwiftyCamp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyCamp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyCamp/Pods-SwiftyCamp.debug.xcconfig"; sourceTree = "<group>"; };
-		879EE4E91437B6378BB24AE1 /* Pods-Unwrap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unwrap.release.xcconfig"; path = "Pods/Target Support Files/Pods-Unwrap/Pods-Unwrap.release.xcconfig"; sourceTree = "<group>"; };
 		A9476511228DF2E7005CC249 /* DynamicHeightHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightHeaderView.swift; sourceTree = "<group>"; };
 		B93AEC4A2273DB68005A50DF /* PracticeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTableViewCell.swift; sourceTree = "<group>"; };
 		B96D1C3E227333BE0096492B /* GlossaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryTableViewCell.swift; sourceTree = "<group>"; };
 		B9AC3C9B227B1262007AC17C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		BB24D72F99ED46CE1F202A82 /* Pods-Unwrap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unwrap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Unwrap/Pods-Unwrap.debug.xcconfig"; sourceTree = "<group>"; };
-		BE61552411B754C7764869FE /* Pods-UnwrapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnwrapUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UnwrapUITests/Pods-UnwrapUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		BE64715D944F01A45D8EE2EB /* Pods-UnwrapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnwrapUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UnwrapUITests/Pods-UnwrapUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DD9A9FDC401B2E4E93A13259 /* Pods_UnwrapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnwrapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E748C8F63BF4E729C65695CA /* Pods-SwiftyCamp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyCamp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyCamp/Pods-SwiftyCamp.release.xcconfig"; sourceTree = "<group>"; };
 		FE81585E2274F8C2007E5E11 /* User-Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User-Progress.swift"; sourceTree = "<group>"; };
@@ -1198,13 +1186,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				56D4B66880A51CB3F7FFE846 /* Pods_SwiftyCamp.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		51CC13702065607F00F37A67 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1548,7 +1529,6 @@
 			isa = PBXGroup;
 			children = (
 				51CC135F2065607C00F37A67 /* SwiftyCamp.app */,
-				51CC13732065607F00F37A67 /* SwiftyCampTests.xctest */,
 				5192DDC92273E05E0081C6DE /* Stickers.appex */,
 			);
 			name = Products;
@@ -2074,10 +2054,6 @@
 		A302CA35FC779D934F639FFC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BB24D72F99ED46CE1F202A82 /* Pods-Unwrap.debug.xcconfig */,
-				879EE4E91437B6378BB24AE1 /* Pods-Unwrap.release.xcconfig */,
-				BE61552411B754C7764869FE /* Pods-UnwrapUITests.debug.xcconfig */,
-				BE64715D944F01A45D8EE2EB /* Pods-UnwrapUITests.release.xcconfig */,
 				7D893EAF0870F3757BC31894 /* Pods-SwiftyCamp.debug.xcconfig */,
 				E748C8F63BF4E729C65695CA /* Pods-SwiftyCamp.release.xcconfig */,
 			);
@@ -2124,24 +2100,6 @@
 			productReference = 51CC135F2065607C00F37A67 /* SwiftyCamp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		51CC13722065607F00F37A67 /* SwiftyCampTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 51CC138A2065607F00F37A67 /* Build configuration list for PBXNativeTarget "SwiftyCampTests" */;
-			buildPhases = (
-				51CC136F2065607F00F37A67 /* Sources */,
-				51CC13702065607F00F37A67 /* Frameworks */,
-				51CC13712065607F00F37A67 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				51CC13752065607F00F37A67 /* PBXTargetDependency */,
-			);
-			name = SwiftyCampTests;
-			productName = UnwrapTests;
-			productReference = 51CC13732065607F00F37A67 /* SwiftyCampTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -2167,11 +2125,6 @@
 							};
 						};
 					};
-					51CC13722065607F00F37A67 = {
-						CreatedOnToolsVersion = 9.3;
-						LastSwiftMigration = 1020;
-						TestTargetID = 51CC135E2065607C00F37A67;
-					};
 				};
 			};
 			buildConfigurationList = 51CC135A2065607C00F37A67 /* Build configuration list for PBXProject "SwiftyCamp" */;
@@ -2188,7 +2141,6 @@
 			projectRoot = "";
 			targets = (
 				51CC135E2065607C00F37A67 /* SwiftyCamp */,
-				51CC13722065607F00F37A67 /* SwiftyCampTests */,
 				5192DDC82273E05E0081C6DE /* Stickers */,
 			);
 		};
@@ -2638,13 +2590,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		51CC13712065607F00F37A67 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -2831,13 +2776,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		51CC136F2065607F00F37A67 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -2845,11 +2783,6 @@
 			isa = PBXTargetDependency;
 			target = 5192DDC82273E05E0081C6DE /* Stickers */;
 			targetProxy = 5192DDCE2273E05F0081C6DE /* PBXContainerItemProxy */;
-		};
-		51CC13752065607F00F37A67 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 51CC135E2065607C00F37A67 /* SwiftyCamp */;
-			targetProxy = 51CC13742065607F00F37A67 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -3068,48 +3001,6 @@
 			};
 			name = Release;
 		};
-		51CC138B2065607F00F37A67 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = UnwrapTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hackingwithswift.UnwrapTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftyCamp.app/SwiftyCamp";
-			};
-			name = Debug;
-		};
-		51CC138C2065607F00F37A67 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = UnwrapTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hackingwithswift.UnwrapTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftyCamp.app/SwiftyCamp";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -3136,15 +3027,6 @@
 			buildConfigurations = (
 				51CC13882065607F00F37A67 /* Debug */,
 				51CC13892065607F00F37A67 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		51CC138A2065607F00F37A67 /* Build configuration list for PBXNativeTarget "SwiftyCampTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				51CC138B2065607F00F37A67 /* Debug */,
-				51CC138C2065607F00F37A67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
