@@ -12,13 +12,11 @@ import UIKit
 class MainTabBarController: UITabBarController, Storyboarded {
     let home = HomeCoordinator()
     let learn = LearnCoordinator()
-    let practice = PracticeCoordinator()
-    let challenges = ChallengesCoordinator()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewControllers = [home.navigationController, learn.splitViewController, practice.splitViewController, challenges.splitViewController]
+        viewControllers = [home.navigationController, learn.splitViewController]
     }
 
     /// If we get some launch options, figure out which one was requested and jump right to the correct tab.
@@ -29,10 +27,6 @@ class MainTabBarController: UITabBarController, Storyboarded {
     }
 
     func handle(shortcutItem: UIApplicationShortcutItem) {
-        if shortcutItem.type == "com.hackingwithswift.unwrapswift.challenges" {
-            selectedViewController = challenges.splitViewController
-        } else {
             fatalError("Unknown shortcut item type: \(shortcutItem.type).")
-        }
     }
 }

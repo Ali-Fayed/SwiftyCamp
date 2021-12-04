@@ -12,7 +12,7 @@ import UIKit
 class HomeDataSource: NSObject, UITableViewDataSource {
     // We have five sections: the status view, points, stats and streak
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return 3
     }
 
     // All sections have a title except the first one.
@@ -27,9 +27,6 @@ class HomeDataSource: NSObject, UITableViewDataSource {
         case 2:
             return "STATS"
 
-        case 3:
-            return "STREAK"
-
         default:
             fatalError("Unknown table view section: \(section).")
         }
@@ -43,14 +40,10 @@ class HomeDataSource: NSObject, UITableViewDataSource {
 
         case 1:
             // score breakdown
-            return 5
-
+            return 3
+            
         case 2:
             // level stats
-            return 3
-
-        case 3:
-            // streak
             return 2
 
         default:
@@ -72,9 +65,6 @@ class HomeDataSource: NSObject, UITableViewDataSource {
 
         case 2:
             return makeStatistic(in: tableView, indexPath: indexPath)
-
-        case 3:
-            return makeStreak(in: tableView, indexPath: indexPath)
 
         default:
             fatalError("Unknown index path: \(indexPath).")
@@ -123,16 +113,6 @@ class HomeDataSource: NSObject, UITableViewDataSource {
             cell.detailTextLabel?.text = User.current.practicePoints.formatted
             cell.accessibilityLabel = "\(User.current.practicePoints) points from practicing"
 
-        case 3:
-            cell.textLabel?.text = "Challenge Points"
-            cell.detailTextLabel?.text = User.current.challengePoints.formatted
-            cell.accessibilityLabel = "\(User.current.challengePoints) points from challenges"
-
-        case 4:
-            cell.textLabel?.text = "Share Score"
-            cell.accessibilityTraits = .button
-            cell.textLabel?.textColor = UIColor(bundleName: "Primary")
-
         default:
             fatalError("Unknown index path: \(indexPath).")
         }
@@ -161,41 +141,11 @@ class HomeDataSource: NSObject, UITableViewDataSource {
                 cell.accessibilityLabel = "You are at the maximum level."
             }
 
-        case 2:
-            cell.textLabel?.text = "Daily Challenges"
-            cell.detailTextLabel?.text = String(User.current.dailyChallenges.count)
-            cell.accessibilityLabel = "\(User.current.dailyChallenges) daily challenges completed."
-
         default:
             fatalError("Unknown index path: \(indexPath).")
         }
 
         return cell
-    }
-
-    /// Shows the user's streak record.
-    func makeStreak(in tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
-        let cell = dequeueStatReusableCell(in: tableView, indexPath: indexPath)
-        switch indexPath.row {
-        case 0:
-            cell.textLabel?.text = "Current Streak"
-            cell.detailTextLabel?.text = "\(User.current.streakDays)"
-            cell.accessibilityLabel = "Your streak count is \(User.current.streakDays)"
-            //UITest reading accessibility label and not accessibility identifier in Storyboard
-            cell.accessibilityIdentifier = "Streak Reminder"
-            return cell
-
-        case 1:
-            cell.textLabel?.text = "Best Streak"
-            cell.detailTextLabel?.text = "\(User.current.bestStreak)"
-            cell.accessibilityLabel = "Your best streak count is \(User.current.bestStreak)"
-            //UITest reading accessibility label and not accessibility identifier in Storyboard
-            cell.accessibilityIdentifier = "Streak Reminder"
-            return cell
-
-        default:
-            fatalError("Unknown index path: \(indexPath).")
-        }
     }
 
     /// Dequeue a reusable and clean table view cell to show an stat.

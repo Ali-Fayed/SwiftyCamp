@@ -21,7 +21,6 @@ class LearnViewController: UITableViewController, UserTracking, UIViewController
         assert(coordinator != nil, "You must set a coordinator before presenting this view controller.")
 
         title = "Learn"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Glossary", style: .plain, target: self, action: #selector(showGlossary))
         registerForUserChanges()
         extendedLayoutIncludesOpaqueBars = true
 
@@ -56,9 +55,5 @@ class LearnViewController: UITableViewController, UserTracking, UIViewController
 
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
         coordinator?.startStudying(using: viewControllerToCommit)
-    }
-
-    @objc func showGlossary() {
-        coordinator?.showGlossary()
     }
 }
