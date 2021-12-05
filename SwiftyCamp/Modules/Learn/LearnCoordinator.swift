@@ -1,9 +1,9 @@
 //
 //  LearnCoordinator.swift
-//  Unwrap
+//  SwiftyCamp
 //
-//  Created by Paul Hudson on 09/08/2018.
-//  Copyright © 2019 Hacking with Swift.
+//  Created by Ali Fayed on 04/12/2021.
+//  Copyright © 2021 Ali Fayed.
 //
 
 import AVKit
@@ -45,12 +45,6 @@ class LearnCoordinator: Coordinator, Awarding, Skippable, AlertHandling, AnswerH
         // make this split view controller behave sensibly on iPad
         splitViewController.preferredDisplayMode = .allVisible
         splitViewController.delegate = SplitViewControllerDelegate.shared
-    }
-
-    /// Shows the list of common Swift terms
-    func showGlossary() {
-        let vc = GlossaryViewController(style: .plain)
-        primaryNavigationController.pushViewController(vc, animated: true)
     }
 
     /// Triggered when we already have a study view controller configured and ready to go, so we just show it.

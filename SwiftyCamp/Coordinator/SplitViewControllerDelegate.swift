@@ -1,9 +1,9 @@
 //
 //  SplitViewControllerDelegate.swift
-//  Unwrap
+//  SwiftyCamp
 //
-//  Created by Paul Hudson on 02/05/2019.
-//  Copyright © 2019 Hacking with Swift. All rights reserved.
+//  Created by Ali Fayed on 04/12/2021.
+//  Copyright © 2021 Ali Fayed.
 //
 
 import UIKit

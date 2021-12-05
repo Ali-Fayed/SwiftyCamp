@@ -34,9 +34,6 @@
 		5144A742227B997A00AB7E58 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5144A741227B997A00AB7E58 /* WebView.swift */; };
 		5148246D233A321A0039E662 /* UITableView-SmartReloading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5148246C233A321A0039E662 /* UITableView-SmartReloading.swift */; };
 		514BF46821E6670000DE1483 /* glossary.json in Resources */ = {isa = PBXBuildFile; fileRef = 514BF46721E6670000DE1483 /* glossary.json */; };
-		514BF46A21E6691A00DE1483 /* GlossaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514BF46921E6691A00DE1483 /* GlossaryViewController.swift */; };
-		514BF46C21E6693100DE1483 /* GlossaryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514BF46B21E6693100DE1483 /* GlossaryDataSource.swift */; };
-		514BF46E21E6698C00DE1483 /* GlossaryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514BF46D21E6698C00DE1483 /* GlossaryEntry.swift */; };
 		5153F49220EF7430009E829D /* LearnCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5153F49120EF7430009E829D /* LearnCoordinator.swift */; };
 		5153F49420EF761B009E829D /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5153F49320EF761B009E829D /* HomeCoordinator.swift */; };
 		5153F49620EF762B009E829D /* PracticeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5153F49520EF762B009E829D /* PracticeCoordinator.swift */; };
@@ -566,7 +563,6 @@
 		56D4B66880A51CB3F7FFE846 /* Pods_SwiftyCamp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 100AFA6C6BCE75C59DC6EA1C /* Pods_SwiftyCamp.framework */; };
 		A9476512228DF2E7005CC249 /* DynamicHeightHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9476511228DF2E7005CC249 /* DynamicHeightHeaderView.swift */; };
 		B93AEC4B2273DB68005A50DF /* PracticeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93AEC4A2273DB68005A50DF /* PracticeTableViewCell.swift */; };
-		B96D1C3F227333BE0096492B /* GlossaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96D1C3E227333BE0096492B /* GlossaryTableViewCell.swift */; };
 		B9AC3C9C227B1262007AC17C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AC3C9B227B1262007AC17C /* WebViewController.swift */; };
 		FE81585F2274F8C2007E5E11 /* User-Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE81585E2274F8C2007E5E11 /* User-Progress.swift */; };
 /* End PBXBuildFile section */
@@ -624,9 +620,6 @@
 		5144A741227B997A00AB7E58 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		5148246C233A321A0039E662 /* UITableView-SmartReloading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView-SmartReloading.swift"; sourceTree = "<group>"; };
 		514BF46721E6670000DE1483 /* glossary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = glossary.json; sourceTree = "<group>"; };
-		514BF46921E6691A00DE1483 /* GlossaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryViewController.swift; sourceTree = "<group>"; };
-		514BF46B21E6693100DE1483 /* GlossaryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryDataSource.swift; sourceTree = "<group>"; };
-		514BF46D21E6698C00DE1483 /* GlossaryEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryEntry.swift; sourceTree = "<group>"; };
 		5153F49120EF7430009E829D /* LearnCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnCoordinator.swift; sourceTree = "<group>"; };
 		5153F49320EF761B009E829D /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		5153F49520EF762B009E829D /* PracticeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeCoordinator.swift; sourceTree = "<group>"; };
@@ -1159,7 +1152,6 @@
 		7D893EAF0870F3757BC31894 /* Pods-SwiftyCamp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyCamp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyCamp/Pods-SwiftyCamp.debug.xcconfig"; sourceTree = "<group>"; };
 		A9476511228DF2E7005CC249 /* DynamicHeightHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightHeaderView.swift; sourceTree = "<group>"; };
 		B93AEC4A2273DB68005A50DF /* PracticeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTableViewCell.swift; sourceTree = "<group>"; };
-		B96D1C3E227333BE0096492B /* GlossaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryTableViewCell.swift; sourceTree = "<group>"; };
 		B9AC3C9B227B1262007AC17C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		DD9A9FDC401B2E4E93A13259 /* Pods_UnwrapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnwrapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E748C8F63BF4E729C65695CA /* Pods-SwiftyCamp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyCamp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyCamp/Pods-SwiftyCamp.release.xcconfig"; sourceTree = "<group>"; };
@@ -1211,17 +1203,6 @@
 				51FE133320E25F1100F29889 /* LightTheme.css */,
 			);
 			path = Light;
-			sourceTree = "<group>";
-		};
-		514BF46F21E6859400DE1483 /* Glossary */ = {
-			isa = PBXGroup;
-			children = (
-				514BF46921E6691A00DE1483 /* GlossaryViewController.swift */,
-				514BF46B21E6693100DE1483 /* GlossaryDataSource.swift */,
-				B96D1C3E227333BE0096492B /* GlossaryTableViewCell.swift */,
-				514BF46D21E6698C00DE1483 /* GlossaryEntry.swift */,
-			);
-			path = Glossary;
 			sourceTree = "<group>";
 		};
 		5156459220E116EE00CED877 /* Content */ = {
@@ -1455,7 +1436,6 @@
 		51C5641B20CCB7D30093030C /* Learn */ = {
 			isa = PBXGroup;
 			children = (
-				514BF46F21E6859400DE1483 /* Glossary */,
 				51FE120B20E252A800F29889 /* Study */,
 				518FAE7520E4231B007F4675 /* Review */,
 				5153F49120EF7430009E829D /* LearnCoordinator.swift */,
@@ -2629,7 +2609,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				51A6D62420E651DA00FB6B46 /* TypeGenerating.swift in Sources */,
-				514BF46A21E6691A00DE1483 /* GlossaryViewController.swift in Sources */,
 				4C41E3132207C678009D580E /* ReviewPractice.swift in Sources */,
 				51A6D63320E6531F00FB6B46 /* Condition.swift in Sources */,
 				51CC1391206560A600F37A67 /* ShapeView.swift in Sources */,
@@ -2668,8 +2647,6 @@
 				510539F8211300D400B28328 /* UIImage-Sharing.swift in Sources */,
 				518F004920EA2D730073AE57 /* PredictTheOutputPractice.swift in Sources */,
 				51A6D66C20E696A300FB6B46 /* SpotTheErrorPractice.swift in Sources */,
-				514BF46E21E6698C00DE1483 /* GlossaryEntry.swift in Sources */,
-				B96D1C3F227333BE0096492B /* GlossaryTableViewCell.swift in Sources */,
 				51596DEC20EE1C9F00952ADC /* WordCollectionViewCell.swift in Sources */,
 				A9476512228DF2E7005CC249 /* DynamicHeightHeaderView.swift in Sources */,
 				51A6D62320E651DA00FB6B46 /* DoubleNames.swift in Sources */,
@@ -2699,7 +2676,6 @@
 				51FE120D20E2532100F29889 /* StudyTextView.swift in Sources */,
 				51CC13972065714F00F37A67 /* UIView-FadeIn.swift in Sources */,
 				518F004B20EA2FE90073AE57 /* PredictTheOutputViewController.swift in Sources */,
-				514BF46C21E6693100DE1483 /* GlossaryDataSource.swift in Sources */,
 				51862E5A20CE12330086CD1B /* User.swift in Sources */,
 				51596DEA20EE04EF00952ADC /* LeftAlignedCollectionViewFlowLayout.swift in Sources */,
 				51A4476D210926FE005D8665 /* CountedSet.swift in Sources */,

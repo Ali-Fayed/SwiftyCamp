@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Unwrap
+//  SwiftyCamp
 //
-//  Created by Paul Hudson on 09/08/2018.
-//  Copyright © 2019 Hacking with Swift.
+//  Created by Ali Fayed on 04/12/2021.
+//  Copyright © 2021 Ali Fayed.
 //
 
 import AVKit
@@ -16,7 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var tabBarController: MainTabBarController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        window?.overrideUserInterfaceStyle = .dark
+        if #available(iOS 13, *) {
+            window?.backgroundColor = .systemBackground
+        } else {
+            window?.backgroundColor = .white
+        }
         // Instantiate UserDefaults keys to be monitored
         let defaults = UserDefaults()
         defaults.register(defaults: ["User": NSData(), "Test User": NSData()])

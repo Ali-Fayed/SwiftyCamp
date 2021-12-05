@@ -1,9 +1,9 @@
 //
 //  WebViewController.swift
-//  Unwrap
+//  SwiftyCamp
 //
-//  Created by Julian Schiavo on 2/5/2019.
-//  Copyright © 2019 Hacking with Swift. All rights reserved.
+//  Created by Ali Fayed on 04/12/2021.
+//  Copyright © 2021 Ali Fayed.
 //
 
 import UIKit

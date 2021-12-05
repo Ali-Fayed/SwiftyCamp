@@ -1,9 +1,9 @@
 //
 //  User-Progress.swift
-//  Unwrap
+//  SwiftyCamp
 //
-//  Created by Wayne Nihart on 4/27/19.
-//  Copyright © 2019 Hacking with Swift. All rights reserved.
+//  Created by Ali Fayed on 04/12/2021.
+//  Copyright © 2021 Ali Fayed.
 //
 
 import UIKit

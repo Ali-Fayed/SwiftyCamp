@@ -1,9 +1,7 @@
+//  SwiftyCamp
 //
-//  MainTabBarController.swift
-//  Unwrap
-//
-//  Created by Paul Hudson on 09/08/2018.
-//  Copyright © 2019 Hacking with Swift.
+//  Created by Ali Fayed on 04/12/2021.
+//  Copyright © 2021 Ali Fayed.
 //
 
 import UIKit
@@ -12,11 +10,12 @@ import UIKit
 class MainTabBarController: UITabBarController, Storyboarded {
     let home = HomeCoordinator()
     let learn = LearnCoordinator()
+    let practice = PracticeCoordinator()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewControllers = [home.navigationController, learn.splitViewController]
+        viewControllers = [home.navigationController, learn.splitViewController, practice.splitViewController]
     }
 
     /// If we get some launch options, figure out which one was requested and jump right to the correct tab.
